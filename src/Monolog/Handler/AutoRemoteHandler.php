@@ -48,7 +48,9 @@ class AutoRemoteHandler extends AbstractProcessingHandler
             $data['key'] = $key;
             $data['title'] = $record['level_name'] . ': ' . $record['channel'];
             $data['text'] = $record['message'];
-            $data['message'] = 'say 5=:=alerta';
+            $data['message'] = 'say eng-usa=:=' .
+                $record['level_name'] . '. ' . $record['channel'] . '. ' . $record['message'];
+            $data['icon'] = 'http://www.mtsolutions.net/blog/wp-content/uploads/Alert-Icon-.png';
             $data['priority'] = 2;
             $data['led'] = "'red'";
             $data['ledon'] = 100;
